@@ -16,6 +16,7 @@ mongoose.connect('mongodb+srv://JesseFlck:azertytest@apipiiquante.6s3p1.mongodb.
 
 const app = express();
 
+app.use(express.json());
 
 // CORS
 
@@ -28,7 +29,6 @@ app.use((req, res, next) => {
 
 
 
-app.use(express.json());
 
 app.use('/api/auth', userRoutes);
 

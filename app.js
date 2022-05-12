@@ -3,6 +3,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/user');
+const path = require('path');
 
 
 // Connexion à la base de données

@@ -1,10 +1,16 @@
-const express = require ('express');
+// Import d'express
+
+const express = require('express');
 const router = express.Router();
 
-const userControl = require ('../controllers/user');
-//const password = require ('../middleware/password');
+// Récupération du controlleur user et des conditions du mot de passe
 
-router.post('/signup', /*password,*/ userControl.signup);
+const userControl = require('../controllers/user');
+const password = require('../middleware/password');
+
+// Définition des routes utilisateur
+
+router.post('/signup', password, userControl.signup);
 router.post('/login', userControl.login);
 
 module.exports = router;

@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 
-// Définition du schema Sauces
+// Mise en place du schema Sauces
 
 const saucesSchema = mongoose.Schema ({
     userId: { type: String, required: true },
@@ -20,7 +20,7 @@ const saucesSchema = mongoose.Schema ({
 });
 
 
-//Export du schema
+// Export du schema
 
 module.exports = mongoose.model('Sauces', saucesSchema);
  
